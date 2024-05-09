@@ -53,7 +53,7 @@ mod native_test {
     }
 
     #[test]
-    #[should_panic(expected: ('Only the owner can make pizza',))]
+    #[should_panic(expected: ('Only the owner can make pizza', 'ENTRYPOINT_FAILED'))]
     fn test_make_pizza_should_fail_when_not_owner() {
         let owner = contract_address_const::<1>();
         let not_owner = contract_address_const::<2>();
